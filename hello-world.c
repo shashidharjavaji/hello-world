@@ -1,16 +1,18 @@
 #include <stdio.h> 
-void main() 
-{
-  int a,b;
-  printf("enter the numbers to swap");
-  scanf("%d\n%d",&a,&b);
-  printf("The numbers before swapping are a=%d and b=%d",&a,&b);
-  swap(&a,&b); printf("After swapping the numbers are a=%d and b=%d",&a,&b);  
-} 
-void swap(int *a,int *b) 
+void swap(int *firstNumber,int *secondNumber) 
 {   
   int temp;
-  temp=*b; 
-  *b=*a; 
-  *a=temp; 
+  temp=*secondNumber; 
+  *secondNumber=*firstNumber; 
+  *firstNUmber=temp; 
 }
+void main() 
+{
+  int firstNUmber,secondNumber;
+  printf("enter the numbers to swap");
+  scanf("%d\n%d",&firstNUmber,&secondNumber);
+  printf("The numbers before swapping are firstNUmber=%d and secondNumber=%d",&firstNUmber,&secondNumber);
+  swap(&firstNUmber,&secondNumber); 
+  printf("After swapping the numbers are firstNUmber=%d and secondNumber=%d",&firstNUmber,&secondNumber);  
+} 
+
